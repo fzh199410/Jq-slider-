@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/slider.css"/>
+    <style>
+        *{
+            font-family: Verdana;
+            font-size:10px;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+        }
+        fieldset{
+            border: solid 1px #dedede ;
+            padding:0 10px;
+        }
+        fieldset legend{
+            background-color: #fff5fa;
+            border: 1px solid #f8b3d0;
+            padding: 5px 10px;
+        }
+        .slidercontainer
+        {
+            margin:20px auto 10px auto;
+        }
+        #myFont
+        {
+            height:50px;
+            line-height:50px;
+        }
+    </style>
+    <script src="js/jquery-1.3.1.min.js"></script>
+    <script src="js/jslider.js"></script>
+    <script>
+        $().ready(function(){
+            document.onselectstart=new Function('return false');
+
+            var maxFont=30;
+
+            var mf=$('#myFont').css('font-size',30);
+            $.fn.jslider({
+                renderTo:'#slidercontainer1',
+                size:{barWidth:400,sliderWidth:5},
+                onChanging:function(percentage,e){
+                    mf.css('font-size',maxFont*percentage);
+                    console.log("percentage:%s",percentage);
+                }
+            })
+
+
+            //----------------------------------------------
+
+
+            var img=$('#imgCS').css('width',size.width).css('height',size.height);
+
+            var blue= $.fn.jslider({
+                renderTo:'#slidercontainer2',
+                size:{barWidth:500,sliderWidth:10},
+                barCssName:'bluebar',
+                onChanging:function(percentage,e){
+                    console.log(percentage)
+                    img.css({
+                        width:size.width*percentage,
+                        height:size.height*percentage
+                    });
+                }
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <fieldset style="width: 420px">
+        <legend>Using slider to change the font-size</legend>
+        <div id="myFont">hello,Tommy!</div>
+        <div class="slidercontainer" id="slidercontainer1"></div>
+    </fieldset>
+
+    <fieldset style="width: 420px">
+        <legend>Using slider to change the img</legend>
+        <div class="slidercontainer" id="slidercontainer2"></div>
+        <img src="images/cs.png" id="imgCS" alt=""/>
+    </fieldset>
+
+
+    <fieldset style="width: 420px">
+        <legend>using slider as a downloader</legend>
+        <div class="slidercontainer" id="slidercontainer3"></div>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,105 @@
+@charset "utf-8";
+.defaultbar{
+    margin-top: 10px;
+    height: 5px;
+    background-color: #ffffe0;
+    border: 1px solid #A9c9e2;
+    position: relative;
+}
+
+.defaultbar .jquery-completed{
+    height: 3px;
+    background-color: #7d9edb;
+    top:1px;
+    left: 1px;
+    position: absolute;
+}
+.defaultbar .jquery-jslider{
+    height: 15px;
+    background-color: #e6e6fa;
+    border: 1px solid #a5b6c8;
+    top: -6px;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+}
+.defaultbar .jquery-jslider-hover{
+    background-color: #000;
+}
+
+.bluebar{
+     margin-top: 10px;
+    height: 4px ;
+    background: #f7f7f7;
+    border: solid 1px #3e3e3e;
+    position: relative;
+}
+
+.bluebar .jquery-completed{
+    height: 4px;
+    background: url("../images/slider/blue/bar.gif") left center no-repeat;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.bluebar .jquery-jslider{
+    height: 17px;
+    background: url("../images/slider/blue/slider.gif")center 0 no-repeat;
+    top: -4px;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+}
+
+/*----progress skin----*/
+.progressbar
+{
+    margin-top: 10px;
+    height: 17px;
+    background:url(../images/slider/progress/progressbar1.gif) left 0 no-repeat;
+    position: relative;
+}
+.progressbar .jquery-completed
+{
+    height: 17px;
+    background:url(../images/slider/progress/progressbar1.gif) left -17px no-repeat;
+    top: 0;
+    left:0;
+    position: absolute;
+}
+.progressbar .jquery-jslider
+{
+    top: 0;
+    display: block;
+    position: absolute;
+}
+.progressbar .jquery-jslider-hover
+{
+}
+/*--style 2--*/
+.progressbar2
+{
+    margin-top: 10px;
+    height: 8px;
+    border:solid 1px #dedede;
+    position: relative;
+}
+.progressbar2 .jquery-completed
+{
+    height: 8px;
+    background:url(../images/slider/progress/progressbar2.gif) left center no-repeat;
+    top: 0;
+    left:0;
+    position: absolute;
+}
+.progressbar2 .jquery-jslider
+{
+    top: 0;
+    display: block;
+    position: absolute;
+}
+.progressbar2 .jquery-jslider-hover
+{
+}
+
